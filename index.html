@@ -27,25 +27,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .dark .glass-nav {
-            background: rgba(15, 23, 42, 0.8);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #3b82f6, #6366f1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .card-hover:hover {
-            transform: translateY(-10px);
-        }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.8); }
+        .text-gradient { background: linear-gradient(to right, #3b82f6, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-10px); }
     </style>
 </head>
 
@@ -58,11 +44,9 @@
             <a href="#about" class="hover:text-blue-600 transition">About</a>
             <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
             <a href="#certifications" class="hover:text-blue-600 transition">Certificates</a>
-            
             <a href="resume.pdf" download class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2 normal-case font-bold">
                 <i class="fas fa-download"></i> CV
             </a>
-            
             <button onclick="toggleDark()" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800"><i id="themeIcon" class="fas fa-moon"></i></button>
         </div>
     </div>
@@ -73,99 +57,69 @@
         <div class="md:col-span-1 flex justify-center" data-aos="zoom-in">
             <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <img src="profile.jpg" alt="Sundara Thamizhan S" onerror="this.src='https://ui-avatars.com/api/?name=ST&background=3b82f6&color=fff&size=300'" class="relative w-64 h-64 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl animate-float">
+                <img src="profile.jpg" alt="Sundara Thamizhan S" onerror="this.src='https://ui-avatars.com/api/?name=ST&background=3b82f6&color=fff&size=400'" class="relative w-64 h-64 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl animate-float">
             </div>
         </div>
 
         <div class="md:col-span-2" data-aos="fade-left">
-            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">Sundara <span class="text-gradient">Thamizhan S</span></h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mb-8">
-                Entry-level <span class="font-bold text-slate-900 dark:text-white">Data Science student</span> at Amrita Vishwa Vidyapeetham. Skilled in Python, Deep Learning, and deploying ML models. Seeking an internship to solve real-world analytical problems.
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter leading-tight">Sundara <span class="text-gradient">Thamizhan S</span></h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mb-8 leading-relaxed">
+                Entry-level <span class="font-bold text-slate-900 dark:text-white underline decoration-blue-500 underline-offset-4">Data Science student</span> at Amrita Vishwa Vidyapeetham. Skilled in Python, Deep Learning, and deploying ML models. Seeking an internship to solve real-world analytical problems.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="resume.pdf" download class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition">Download Resume</a>
-                <a href="mailto:Sarasundar75@gmail.com" class="px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-xl font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">Contact Me</a>
+                <a href="resume.pdf" download class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center gap-2">
+                    <i class="fas fa-file-pdf"></i> Download Resume
+                </a>
+                <div class="flex items-center gap-4 ml-4">
+                    <a href="https://github.com" class="text-2xl hover:text-blue-600 transition"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" class="text-2xl hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="skills" class="py-20 bg-white dark:bg-slate-900/50">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 text-center shadow-sm">
-                <i class="fab fa-python text-3xl text-blue-500 mb-3"></i>
-                <p class="font-bold text-sm">Python</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 text-center shadow-sm">
-                <i class="fas fa-brain text-3xl text-indigo-500 mb-3"></i>
-                <p class="font-bold text-sm">Deep Learning</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 text-center shadow-sm">
-                <i class="fas fa-chart-pie text-3xl text-emerald-500 mb-3"></i>
-                <p class="font-bold text-sm">Data Analysis</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 text-center shadow-sm">
-                <i class="fas fa-database text-3xl text-amber-500 mb-3"></i>
-                <p class="font-bold text-sm">MySQL</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="py-24 px-6">
+<section id="projects" class="py-24 px-6 bg-white dark:bg-slate-900/30">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-black mb-12">Project Experience</h2>
+        <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+            <span class="w-12 h-1 bg-blue-600"></span> Recent Projects
+        </h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover shadow-sm" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2">Crop Yield Prediction System</h3>
-                <p class="text-blue-500 text-xs font-black uppercase tracking-widest mb-4">Machine Learning • Scikit-Learn</p>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Built regression models (KNN, Random Forest) to predict yield. Performed feature selection and missing value handling to boost accuracy.</p>
-                <div class="flex gap-2"><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Pandas</span><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Regressions</span></div>
+            <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-2">Crop Yield Prediction</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Regression models (KNN, Random Forest) built to predict yield based on soil/weather data. Achieved higher accuracy through feature scaling and selection.</p>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 text-[10px] font-bold rounded">SCIKIT-LEARN</span>
             </div>
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl font-bold mb-2">Image-Based Crop Disease Classification</h3>
-                <p class="text-indigo-500 text-xs font-black uppercase tracking-widest mb-4">Deep Learning • CNN</p>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Fine-tuned CNN models for leaf disease detection. Deployed on Streamlit for real-time guidance and treatment prediction.</p>
-                <div class="flex gap-2"><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">TensorFlow</span><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Keras</span></div>
-            </div>
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover shadow-sm" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2">Medical Appointment Scheduling</h3>
-                <p class="text-emerald-500 text-xs font-black uppercase tracking-widest mb-4">RL • Multi-Agent</p>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Designed an RL-based system to optimize doctor allocation and handle emergency interruptions using Reinforcement Learning.</p>
-                <div class="flex gap-2"><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Python</span><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">OpenAI Gym</span></div>
-            </div>
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl font-bold mb-2">Sales Prediction System</h3>
-                <p class="text-amber-500 text-xs font-black uppercase tracking-widest mb-4">Machine Learning • Forecasting</p>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Developed ML models to forecast sales revenue for a 3-month horizon, improving inventory planning and profitability.</p>
-                <div class="flex gap-2"><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">NumPy</span><span class="text-[10px] bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Forecasting</span></div>
+            <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl font-bold mb-2">Crop Disease Classification</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Fine-tuned CNN models to classify leaf diseases. Applied data augmentation and deployed using Streamlit for real-time guidance.</p>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 text-[10px] font-bold rounded">TENSORFLOW</span>
             </div>
         </div>
     </div>
 </section>
 
-<section id="certifications" class="py-24 bg-slate-100/50 dark:bg-slate-900/50 px-6">
+<section id="certifications" class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-black mb-12">Certifications</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
-                <p class="text-blue-500 text-[10px] font-bold mb-2">2024</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <i class="fas fa-certificate text-blue-500 mb-4"></i>
                 <h4 class="font-bold text-sm">Data Analysis with Python</h4>
                 <p class="text-xs text-slate-500">IBM Cognitive Class</p>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
-                <p class="text-blue-500 text-[10px] font-bold mb-2">2024</p>
+            <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <i class="fas fa-certificate text-indigo-500 mb-4"></i>
                 <h4 class="font-bold text-sm">Python & ML Bootcamp</h4>
                 <p class="text-xs text-slate-500">GDSC & AWS Builder</p>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
-                <p class="text-blue-500 text-[10px] font-bold mb-2">2023</p>
-                <h4 class="font-bold text-sm">Programming Certification</h4>
+            <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <i class="fas fa-certificate text-emerald-500 mb-4"></i>
+                <h4 class="font-bold text-sm">C, C++, Java & Python</h4>
                 <p class="text-xs text-slate-500">Cogtis Technologies</p>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
-                <p class="text-blue-500 text-[10px] font-bold mb-2">2024</p>
+            <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <i class="fas fa-certificate text-amber-500 mb-4"></i>
                 <h4 class="font-bold text-sm">Email Writing Skills</h4>
                 <p class="text-xs text-slate-500">Infosys Springboard</p>
             </div>
@@ -173,22 +127,11 @@
     </div>
 </section>
 
-<section id="education" class="py-24 px-6 bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-black mb-8">Education</h2>
-        <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
-            <h3 class="text-2xl font-bold mb-2 text-blue-400">Integrated M.Sc. Data Science</h3>
-            <p class="mb-2">Amrita Vishwa Vidyapeetham, Coimbatore</p>
-            <p class="text-slate-400">2022 — 2027</p>
-            <div class="mt-6 inline-block bg-blue-600 px-6 py-2 rounded-full font-black">CGPA: 6.84</div>
-        </div>
-    </div>
-</section>
-
-<footer class="py-20 text-center">
-    <p class="text-slate-500 text-sm mb-4">Coimbatore, India • +91 86082 89969 • Sarasundar75@gmail.com</p>
-    <div class="flex justify-center gap-6">
-        <a href="resume.pdf" download class="text-blue-600 font-bold underline">Download PDF Resume</a>
+<footer class="py-20 bg-slate-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-4">Let's build something together</h2>
+        <p class="text-slate-400 mb-8">Coimbatore, India • +91 86082 89969 • Sarasundar75@gmail.com</p>
+        <p class="text-[10px] uppercase tracking-widest text-slate-600">© 2026 Sundara Thamizhan S</p>
     </div>
 </footer>
 
